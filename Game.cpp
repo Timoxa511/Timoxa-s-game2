@@ -105,20 +105,18 @@ void GameProcces (const Textures *textures)
     int t = 0;
     while (!GetAsyncKeyState (VK_ESCAPE))
         {
-
-        txLock ();
-
+        //txLock ();
         //textures->Map.Draw ({0, 0});
-
         //COLORREF PointClr = txGetPixel (Steve.pos.x, Steve.pos.y);
         //ImageDraw (&textures->Fon, {0, 0});
-        txUnlock ();
+        //txUnlock ();
+
 
         //ObjectControl (&Steve);
         //GameMove (&Steve, DT)
         Steve.Picture.CircleAnimation (Steve.pos, Steve.AnimationNumber, t/4%4);
 
-        HeroSetAnimation (&Steve, t/5%18);
+        HeroSetAnimation (&Steve, t/9%18);
 
 
 
